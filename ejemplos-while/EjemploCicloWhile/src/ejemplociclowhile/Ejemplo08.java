@@ -30,18 +30,20 @@ public class Ejemplo08 {
         boolean bandera = true;
 
         System.out.println("Ingrese las notas de los estudiantes de su materia");
-        while (bandera) {
+        
+        while (bandera == true) {
             System.out.println("Ingrese calificación:");
             calificacion = entrada.nextDouble();
             suma_total = suma_total + calificacion;
-            contador = contador + 1;
+            contador = contador + 1; //este contador permite que el usuario decida cuando acabar el programa 
+                                       // y poder saber cuantos usuarios ingresan para sacar promedio
 
             entrada.nextLine(); // Ojo usamos el limpiador del scanner (buffer)
 
             // proceso para salir del ciclo.
             System.out.println("Ingrese si para salir");
             String temporal = entrada.nextLine();
-            if (temporal.equals("si")) {
+            if (temporal.equals("si")) { // el .equals permite comparacion de tipo cadena.
                 bandera = false;
             }
         }

@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo10 {
+public class Ejemplo101 {
     /**
      * @param args the command line arguments
      */
@@ -22,7 +22,7 @@ public class Ejemplo10 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        int limite_tabla = 12;
+        int limite_tabla;
         int contador = 1;
         int operacion;
         int tabla;
@@ -30,10 +30,13 @@ public class Ejemplo10 {
         System.out.println("Ingrese el número de tabla a generar");
         tabla = entrada.nextInt();
         
+        System.out.println("Ingrese el limite de la tabla");
+        limite_tabla = entrada.nextInt();
+        
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n\n", cadena);
         
-        while (contador <= 12){
+        while (contador <= limite_tabla){
             operacion = tabla * contador;
             
             cadena = String.format("%s%d*%d=%d\n\n", //cadena acomuladora

@@ -5,6 +5,9 @@
  */
 package ejemplociclowhile;
 
+import java.util.Scanner;
+import java.util.Locale;
+
 /**
  *
  * @author reroes
@@ -16,12 +19,17 @@ public class Ejemplo02 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int limite = 10;
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        int limite;
         int contador = 1;
           
+            System.out.printf("ingrese un numero");
+            limite = entrada.nextInt();
+        
         while (contador <= limite){
             System.out.printf("Contador %d\n", contador);
-            
+                contador = contador + 1;
         }
         
     }
